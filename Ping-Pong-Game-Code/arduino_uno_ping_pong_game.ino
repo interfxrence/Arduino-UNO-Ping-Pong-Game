@@ -1,4 +1,3 @@
-// include the LiquidCrystal library
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
@@ -46,7 +45,6 @@ int score1 = 0, score2 = 0;
 boolean game = 0;
 int a = 0;
 
-/*----------------------------------------setup function--------------------------------*/
 void setup() {
 
   pinMode(P1U, INPUT);			// setting push buttons as inputs
@@ -66,9 +64,7 @@ void setup() {
   lcd.print("Ping Pong Game");
   delay(1500);
 }
-/*----------------------------------------end of setup function--------------------------------*/
 
-/*----------------------------------------loop function---------------------------------------*/
 void loop() {
 
   //executes this while loop untill start button is pressed
@@ -302,11 +298,6 @@ void loop() {
       ballRightUp();
   }
 }
-
-/*----------------------------------------end of loop function--------------------------------*/
-
-/*-------------------------------------------other functions----------------------------------*/
-
 //paddle1Up function
 void paddle1Up() {
   if (paddle1[0] != 1) {
